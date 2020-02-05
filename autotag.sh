@@ -39,7 +39,7 @@ MAJOR=${LAST_TAG_ARR[0]}
 MINOR=${LAST_TAG_ARR[1]}
 BUG=${LAST_TAG_ARR[2]}
 
-echo "Last Tag: v$MAJOR.$MINOR.$BUG"
+echo "Last tag: v$MAJOR.$MINOR.$BUG"
 
 case $INCREMENT_CHOICE in
 "M")
