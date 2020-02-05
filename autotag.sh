@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USAGE='USAGE: autotag.sh INCREMENT [-p] [-h]
+USAGE='USAGE: ./autotag.sh INCREMENT [-p] [-h]
 Position arguments:
     INCREMENT   : One of M|m|b for major, minor or bug.
 
@@ -29,7 +29,7 @@ fi
 echo 'Auto tagging...'
 
 LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
-LAST_TAG=${VERSION:-'v0.0.0'}
+LAST_TAG=${LAST_TAG:-'v0.0.0'}
 LAST_TAG="${LAST_TAG/v/}"
 
 # Replace dot with space then split into array.
