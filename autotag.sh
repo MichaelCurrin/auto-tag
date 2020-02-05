@@ -1,8 +1,12 @@
 #!/bin/bash
 
-USAGE='USAGE: autotag.sh INCREMENT [-h|--help]
-Arguments:
-    INCREMENT: One of M|m|b for major, minor or bug.
+USAGE='USAGE: autotag.sh INCREMENT [-p] [-h]
+Position arguments:
+    INCREMENT   : One of M|m|b for major, minor or bug.
+
+Flags:
+    -h --help   : Show help and exit.
+    -p --preview: Preview new tag version but do not actually tag it.
 '
 
 if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
@@ -10,6 +14,17 @@ if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
     exit 1
 fi
 INCREMENT_CHOICE=$1
+
+if [[ "$2" ]]; then
+    if [[ "$2" == '-p' ]] || [[ "$2" == '--preview' ]]; then
+        PREVIEW=true
+    else
+        echo 'Invalid arguments'
+        echo
+        echo "$USAGE"
+    fi
+    PREVIEW=false
+fi
 
 echo 'Auto tagging...'
 
@@ -48,4 +63,11 @@ case $INCREMENT_CHOICE in
 esac
 
 NEW_TAG="v$MAJOR.$MINOR.$BUG"
-echo "New Tag: $NEW_TAG"
+echo "New tag: $NEW_TAG"
+
+if [[ "$PREVIEW" ]]; then
+    echo 'Skipping tag creation'
+else
+    echo "Creating annotated tag..."
+    git tag -a $NEW_TAG -m $NEW_TAG
+fi
