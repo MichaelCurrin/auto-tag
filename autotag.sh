@@ -6,7 +6,7 @@ Position arguments:
 
 Flags:
     -h --help   : Show help and exit.
-    -p --preview: Preview new tag version but do not actually tag it.
+    -p --preview: Dry run to show new tag label and not actually create it.
 '
 
 if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
