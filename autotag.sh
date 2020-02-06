@@ -23,6 +23,7 @@ if [[ "$2" ]]; then
         echo
         echo "$USAGE"
     fi
+else
     PREVIEW=false
 fi
 
@@ -65,7 +66,7 @@ esac
 NEW_TAG="v$MAJOR.$MINOR.$BUG"
 echo "New tag: $NEW_TAG"
 
-if [[ "$PREVIEW" ]]; then
+if [[ "$PREVIEW" == true ]]; then
     echo 'Skipping tag creation'
 else
     echo "Creating annotated tag..."
