@@ -1,7 +1,7 @@
 # Auto Tag
 > Generate next git tag version and then apply it
 
-_Made with: Bash_
+[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)](https://www.gnu.org/software/bash/)[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/)
 
 A tool to take the effort out of incrementing _git_ tags.
 
