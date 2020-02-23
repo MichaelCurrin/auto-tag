@@ -27,6 +27,10 @@ else
     PREVIEW=false
 fi
 
+echo 'Fetching tags...'
+
+git fetch --tags
+
 echo 'Auto tagging...'
 
 LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
