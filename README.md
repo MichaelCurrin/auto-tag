@@ -9,9 +9,9 @@ This project is based on the Semantic versioning standard which you can read on 
 vMAJOR.MINOR.BUG
 ```
 
-## Usage
+## 🏋️‍♂️ Usage
 
-### Usage instructions
+### Command-line usage
 
 ```
 USAGE: ./autotag.sh INCREMENT [-p] [-h]
@@ -52,7 +52,7 @@ New tag: v0.2.0
 Skipping tag creation
 ```
 
-## Resources
+## 📚 Resources
 
 Inspiration for the script comes from the following:
 - https://stackoverflow.com/questions/3760086/automatic-tagging-of-releases
