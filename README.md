@@ -1,9 +1,15 @@
 # Auto Tag
 > Generate next git tag version and then apply it
 
-This tool will read your latest git tag or default to a standard one, create a label for the new tag and then either just show it or show it and apply it.
+_Made with: Bash_
 
-This project is based on the Semantic versioning standard which you can read on [semver.org](https://semver.org/).
+A tool to take the effort out of incrementing _git_ tags.
+
+When run, this shell tool will read your latest _git_ tag, create and show label for the new tag and then optionally create the tag. Note the tag will be _annotated_.
+
+This project is based on the _Semantic Versioning_ standard, which you can read about on [semver.org](https://semver.org/).
+
+See how tags are named with this standard:
 
 ```
 vMAJOR.MINOR.BUG
@@ -37,7 +43,7 @@ $ ./autotag.sh M --preview
 ### Sample output
 
 ```
-./autotag.sh b
+$ ./autotag.sh b
 Auto tagging...
 Last tag: v0.1.0
 New tag: v0.1.1
@@ -45,7 +51,7 @@ Creating annotated tag...
 ```
 
 ```
-./autotag.sh m -p
+$ ./autotag.sh m -p
 Auto tagging...
 Last tag: v0.1.1
 New tag: v0.2.0
