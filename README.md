@@ -21,6 +21,9 @@ vMAJOR.MINOR.BUG
 
 ```
 USAGE: ./autotag.sh INCREMENT [-p] [-h]
+
+Increment git tag using given level.
+
 Positional arguments:
     INCREMENT   : One of M|m|b for major, minor or bug.
 
