@@ -7,8 +7,7 @@
 - [🎚️ Versioning sequence](#️-versioning-sequence)
 - [🎛️ How it works](#️-how-it-works)
 - [💽 Pre-requisites](#-pre-requisites)
-- [📘 Documentation](#-documentation)
-- [📚 Resources](#-resources)
+- [� Resources](#-resources)
 
 
 ## 🧑‍🚀 Purpose

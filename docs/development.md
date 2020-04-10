@@ -4,6 +4,8 @@
 
 - [Setup](#setup)
 - [Run](#run)
+    - [Direct](#direct)
+    - [Using a bin directory](#using-a-bin-directory)
 
 
 ## Setup
