@@ -41,6 +41,27 @@ else
   PREVIEW=false
 fi
 
+echo 'Fetching tags...'
+
+git fetch --tags
+
+echo 'Finding last tag...'
+
+LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
+LAST_TAG=${LAST_TAG:-$FALLBACK_TAG}
+LAST_TAG="${LAST_TAG/v/}"
+
+# Replace dot with space then split into array.
+LAST_TAG_ARR=(${LAST_TAG//./ })
+
+MAJOR=${LAST_TAG_ARR[0]}
+MINOR=${LAST_TAG_ARR[1]}
+BUG=${LAST_TAG_ARR[2]}
+
+echo "Last tag: v$MAJOR.$MINOR.$BUG"
+
+# Although the exit only happens after fetching, this needs to happen here so variables are set.
+# Otherwise a refactor is needed to check M|m|b and exit if needed, then actually calculate here.
 case $LEVEL_CHOICE in
 "M")
   ((MAJOR += 1))
@@ -61,25 +82,6 @@ case $LEVEL_CHOICE in
   exit 1
   ;;
 esac
-
-echo 'Fetching tags...'
-
-git fetch --tags
-
-echo 'Finding last tag...'
-
-LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
-LAST_TAG=${LAST_TAG:-$FALLBACK_TAG}
-LAST_TAG="${LAST_TAG/v/}"
-
-# Replace dot with space then split into array.
-LAST_TAG_ARR=(${LAST_TAG//./ })
-
-MAJOR=${LAST_TAG_ARR[0]}
-MINOR=${LAST_TAG_ARR[1]}
-BUG=${LAST_TAG_ARR[2]}
-
-echo "Last tag: v$MAJOR.$MINOR.$BUG"
 
 NEW_TAG="v$MAJOR.$MINOR.$BUG"
 echo "New tag: $NEW_TAG"
