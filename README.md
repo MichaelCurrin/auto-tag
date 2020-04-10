@@ -1,18 +1,18 @@
 # Auto Tag
-> Terminal tool to conveniently increment your git tag and apply it
+> Shell tool to conveniently increment your git tag and apply it
 
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)](https://www.gnu.org/software/bash/) [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
 
 ## Purpose
 
-When creating a [git tag](https://github.com/MichaelCurrin/learn-to-code/blob/master/Version%20control/Git/tags.md) in your project and want to create a new tag, run the Auto-Tag tool. Specify a major, minor or bug level and it will determine the appropriate next tag level based on the latest tag, then it will create it for oyu.
+When creating a [git tag](https://github.com/MichaelCurrin/learn-to-code/blob/master/Version%20control/Git/tags.md) in your project and want to create a new tag, run the Auto-Tag tool. Specify a major, minor or bug level and it will determine the appropriate next tag level based on the latest tag, then it will create it for you.
 
 It says you time, effort and the chance of making a mistake.
 
 With Auto-Tag, you do **not** have to:
 
-- know to check latest tag is,
+- know to check latest tag is
 - do a mental calculation
 - type out the tag in full
 
