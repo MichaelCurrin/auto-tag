@@ -1,68 +1,81 @@
 # Auto Tag
-> Generate next git tag version and then apply it
+> Terminal tool to conveniently increment your git tag and apply it
 
-[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)](https://www.gnu.org/software/bash/)[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/)
+[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)](https://www.gnu.org/software/bash/) [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
-A tool to take the effort out of incrementing _git_ tags.
 
-When run, this shell tool will read your latest _git_ tag, create and show label for the new tag and then optionally create the tag. Note the tag will be _annotated_.
+## Purpose
+
+When creating a [git tag](https://github.com/MichaelCurrin/learn-to-code/blob/master/Version%20control/Git/tags.md) in your project and want to create a new tag, run the Auto-Tag tool. Specify a major, minor or bug level and it will determine the appropriate next tag level based on the latest tag, then it will create it for oyu.
+
+It says you time, effort and the chance of making a mistake.
+
+With Auto-Tag, you do **not** have to:
+
+- know to check latest tag is,
+- do a mental calculation
+- type out the tag in full
+
+
+## Versioning sequence
 
 This project is based on the _Semantic Versioning_ standard, which you can read about on [semver.org](https://semver.org/).
 
-See how tags are named with this standard:
+Here is the format:
 
 ```
 vMAJOR.MINOR.BUG
 ```
 
-## 🏋️‍♂️ Usage
+If you are on version `v0.1.2`, then run the following to increment the minor version:
 
-### Command-line usage
-
-```
-USAGE: ./autotag.sh INCREMENT [-p] [-h]
-
-Increment git tag using given level.
-
-Positional arguments:
-    INCREMENT   : One of M|m|b for major, minor or bug.
-
-Flags:
-    -h --help   : Show help and exit.
-    -p --preview: Preview new tag version but do not actually tag it.
+```sh
+autotag.sh M
 ```
 
-Note this works best on the master branch, for reading from existing tags on master and actually creating the tag.
+Then the application will increment the minor value and set the bug version to zero.
 
-### Example usage
+So your new tag will be `v0.2.0`.
 
-```bash
-$ ./autotag.sh M
-$ ./autotag.sh m
-$ ./autotag.sh b
-$ ./autotag.sh M --preview
-```
+Note this project is only intended for versions with `v` prefix.
 
-### Sample output
 
-```
-$ ./autotag.sh b
-Auto tagging...
-Last tag: v0.1.0
-New tag: v0.1.1
-Creating annotated tag...
-```
+## How it works
 
-```
-$ ./autotag.sh m -p
-Auto tagging...
-Last tag: v0.1.1
-New tag: v0.2.0
-Skipping tag creation
-```
+When run, this Auto-Tag will:
+
+1. Fetch all tags on the remote.
+2. Read your latest _git_ tag
+3. Create and show label for the new tag.
+4. Actually create the tag.
+
+Note the tag will be of type _annotated_.
+
+Auto-Tag was built to be run locally by hand, but you can add it as part of your release flow.
+
+
+## Pre-requisites
+
+Note this was written for Unix-like systems (Linux and macOS).
+
+All you need is [Bash](https://github.com/MichaelCurrin/learn-to-code/blob/master/Shell/Bash/README.md) shell.
+
+There are no dependencies.
+
+
+## Documentation
+
+- [Usage](/docs/usage.md)
+
 
 ## 📚 Resources
 
-Inspiration for the script comes from the following:
-- https://stackoverflow.com/questions/3760086/automatic-tagging-of-releases
-- https://gist.github.com/dtiemann83/cfa16ade69a3ea451ad760d4118a9351
+Inspiration for this project comes from the following:
+
+- [Automatic tagging of releases](https://stackoverflow.com/questions/3760086/automatic-tagging-of-releases)
+- [Gist](https://gist.github.com/dtiemann83/cfa16ade69a3ea451ad760d4118a9351)
+
+
+## License
+
+[MIT](/LICENSE).
