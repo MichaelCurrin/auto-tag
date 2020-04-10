@@ -38,6 +38,27 @@ else
     PREVIEW=false
 fi
 
+case $LEVEL_CHOICE in
+"M")
+    ((MAJOR += 1))
+    MINOR=0
+    BUG=0
+    ;;
+"m")
+    ((MINOR += 1))
+    BUG=0
+    ;;
+"b")
+    ((BUG += 1))
+    ;;
+*)
+    echo "Bad arguments! Read the instructions and try again."
+    echo
+    echo "$USAGE"
+    exit 1
+    ;;
+esac
+
 echo 'Fetching tags...'
 
 git fetch --tags
@@ -56,27 +77,6 @@ MINOR=${LAST_TAG_ARR[1]}
 BUG=${LAST_TAG_ARR[2]}
 
 echo "Last tag: v$MAJOR.$MINOR.$BUG"
-
-case $LEVEL_CHOICE in
-"M")
-    ((MAJOR += 1))
-    MINOR=0
-    BUG=0
-    ;;
-"m")
-    ((MINOR += 1))
-    BUG=0
-    ;;
-"b")
-    ((BUG += 1))
-    ;;
-*)
-    echo "Bad arguments!"
-    echo
-    echo "$USAGE"
-    exit 1
-    ;;
-esac
 
 NEW_TAG="v$MAJOR.$MINOR.$BUG"
 echo "New tag: $NEW_TAG"
