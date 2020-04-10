@@ -30,7 +30,7 @@ vMAJOR.MINOR.BUG
 If you are on version `v0.1.2`, then run the following to increment the minor version:
 
 ```sh
-autotag.sh M
+$ autotag.sh M
 ```
 
 Then the application will increment the minor value and set the bug version to zero.

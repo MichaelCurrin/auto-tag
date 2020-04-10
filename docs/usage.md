@@ -1,5 +1,6 @@
 # 🏋️‍♂️ Usage
 
+
 ## Fetching
 
 As an added precaution, the application will always fetch the latest tags on the remote, to avoid accidentally creating a local tag that already exists on a remote.
@@ -9,17 +10,18 @@ As an added precaution, the application will always fetch the latest tags on the
 ```
 USAGE: ./autotag.sh INCREMENT [-p] [-h]
 
-Increment git tag using given level.
+Increment git tag using given increment level.
 
 Positional arguments:
-    INCREMENT   : One of M|m|b for major, minor or bug.
+    LEVEL       : One of M|m|b for major, minor or bug.
 
 Flags:
     -h --help   : Show help and exit.
     -p --preview: Preview new tag version but do not actually tag it.
 ```
 
-Note this works best on the master branch, for reading from existing tags on master and actually creating the tag.
+As with tagging the normal way, it is recommended to be on the `master` branch before creating a tag, otherwise the tag may not be meaningful in a sequence (especially if the feature branch is behind `master`).
+
 
 
 ## Example usage

@@ -9,10 +9,10 @@
 
 USAGE='USAGE: ./autotag.sh INCREMENT [-p] [-h]
 
-Increment git tag using given level.
+Increment git tag using given incremental level.
 
 Positional arguments:
-    INCREMENT   : One of M|m|b for major, minor or bug.
+    LEVEL       : One of M|m|b for major, minor or bug.
 
 Flags:
     -h --help   : Show help and exit.
