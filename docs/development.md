@@ -11,14 +11,16 @@
 Clone the repo.
 
 ```sh
-git clone git@github.com:MichaelCurrin/auto-tag.git
+$ git clone git@github.com:MichaelCurrin/auto-tag.git
+$ cd auto-tag
 ```
 
 
 ## Run
 
-Make any changes.
+Make any changes then run the script.
 
+### Direct
 
 Test the changes on the repo itself.
 
@@ -27,19 +29,22 @@ $ cd auto-tag/autotag
 $ ./autotag --help
 ```
 
-Or another repo.
+Or on another repo.
 
 ```sh
-$ cd other-repo
+$ cd <OTHER_REPO>
 $ <PATH_TO>/autotag M --preview
 ```
+
+### Using a bin directory
 
 Optionally add the script to your bin.
 
 ```sh
-ln -s auto-tag/autotag ~/bin/autotag
+$ cd ~/bin
+$ ln -s <PATH_TO>/auto-tag/autotag
 ```
 
 ```sh
-autotag M --preview
+$ autotag M --preview
 ```
