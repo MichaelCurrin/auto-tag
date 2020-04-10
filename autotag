@@ -23,7 +23,7 @@ Flags:
 "
 
 if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
-    echo "$USAGE"
+    echo "$HELP"
     exit 1
 fi
 LEVEL_CHOICE=$1
@@ -32,9 +32,10 @@ if [[ "$2" ]]; then
     if [[ "$2" == '-p' ]] || [[ "$2" == '--preview' ]]; then
         PREVIEW=true
     else
-        echo 'Invalid arguments'
+        echo "Invalid arguments: \"$*\""
         echo
         echo "$USAGE"
+        exit 1
     fi
 else
     PREVIEW=false
