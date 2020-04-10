@@ -1,5 +1,11 @@
 # ⛵ Usage
 
+- [Fetching](#fetching)
+- [Command-line usage](#command-line-usage)
+- [Example usage](#example-usage)
+- [Delete tag](#delete-tag)
+- [Push tag](#push-tag)
+
 
 ## Fetching
 

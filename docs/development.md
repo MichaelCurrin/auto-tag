@@ -1,5 +1,9 @@
 # 🚧 Development
 
+- [Setup](#setup)
+- [Run](#run)
+
+
 ## Setup
 
 Clone the repo.

@@ -1,6 +1,10 @@
 # 📦 Installation
 
-To setup AutoTag, do the following.
+- [Download](#download)
+- [Change permissions](#change-permissions)
+- [Test](#test)
+- [Alias](#alias)
+- [Update](#update)
 
 
 ## Download
