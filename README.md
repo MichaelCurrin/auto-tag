@@ -3,6 +3,16 @@
 
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)](https://www.gnu.org/software/bash/) [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
+**Table of contents:**
+
+- [🧑‍🚀 Purpose](#-purpose)
+- [🎚️ Versioning sequence](#️-versioning-sequence)
+- [🎛️ How it works](#️-how-it-works)
+- [💽 Pre-requisites](#-pre-requisites)
+- [📘 Documentation](#-documentation)
+- [📚 Resources](#-resources)
+- [⚖️ License](#️-license)
+
 
 ## 🧑‍🚀 Purpose
 
@@ -67,6 +77,7 @@ The application is a single script. There are no external dependencies.
 
 - [📦 Installation](/docs/installation.md)
 - [⛵ Usage](/docs/usage.md)
+- [🚧 Development](/docs/development.md)
 
 
 ## 📚 Resources
