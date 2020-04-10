@@ -11,4 +11,4 @@
 - [ℹ️ About](about)
 - [📦 Installation](installation)
 - [⛵ Usage](usage)
-- [🚧 Development](/development)
+- [🚧 Development](development)
