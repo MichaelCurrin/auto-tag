@@ -58,9 +58,9 @@ Auto-Tag was built to be run locally by hand, but you can add it as part of your
 
 Note this was written for Unix-like systems (Linux and macOS).
 
-All you need is [Bash](https://github.com/MichaelCurrin/learn-to-code/blob/master/Shell/Bash/README.md) shell.
+So you just need [Bash](https://github.com/MichaelCurrin/learn-to-code/blob/master/Shell/Bash/README.md) shell installed.
 
-There are no dependencies.
+The application is a single script. There are no external dependencies.
 
 
 ## Documentation
