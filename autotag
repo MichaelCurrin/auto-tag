@@ -8,17 +8,19 @@
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 
 FALLBACK_TAG='v0.0.0'
-USAGE='USAGE: autotag LEVEL [-p] [-h]
+
+USAGE='USAGE: autotag LEVEL [-p] [-h]'
+HELP="$USAGE
 
 Increment git tag using given increment level.
 
 Positional arguments:
-    LEVEL       : "M" for major, "m" for minor or "b" for bug.
+    LEVEL       : 'M' for major, 'm' for minor or 'b' for bug.
 
 Flags:
     -h --help   : Show help and exit.
     -p --preview: Dry run to show new tag label and not actually create it.
-'
+"
 
 if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
     echo "$USAGE"
@@ -52,7 +54,7 @@ case $LEVEL_CHOICE in
     ((BUG += 1))
     ;;
 *)
-    echo "Bad arguments! Read the instructions and try again."
+    echo "Invalid arguments: \"$*\""
     echo
     echo "$USAGE"
     exit 1
