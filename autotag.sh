@@ -8,7 +8,7 @@
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 
 FALLBACK_TAG='v0.0.0'
-USAGE='USAGE: ./autotag.sh LEVEL [-p] [-h]
+USAGE='USAGE: autotag LEVEL [-p] [-h]
 
 Increment git tag using given increment level.
 
@@ -42,7 +42,7 @@ echo 'Fetching tags...'
 
 git fetch --tags
 
-echo 'Auto tagging...'
+echo 'Finding last tag...'
 
 LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
 LAST_TAG=${LAST_TAG:-$FALLBACK_TAG}

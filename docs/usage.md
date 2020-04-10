@@ -8,7 +8,7 @@ As an added precaution, the application will always fetch the latest tags on the
 ## Command-line usage
 
 ```
-USAGE: ./autotag.sh LEVEL [-p] [-h]
+USAGE: ./autotag LEVEL [-p] [-h]
 
 Increment git tag using given increment level.
 
@@ -28,15 +28,15 @@ As with tagging the normal way, it is recommended to be on the `master` branch b
 Increment major version, minor version, or bug version respectively as follows:
 
 ```bash
-$ ./autotag.sh M
-$ ./autotag.sh m
-$ ./autotag.sh b
+$ ./autotag M
+$ ./autotag m
+$ ./autotag b
 ```
 
 You'll see output like this:
 
 ```sh
-$ ./autotag.sh b
+$ ./autotag b
 ```
 ```
 Auto tagging...
@@ -48,7 +48,7 @@ Creating annotated tag...
 Use the optional preview flag:
 
 ```sh
-$ ./autotag.sh m -p
+$ ./autotag m -p
 ```
 ```
 Auto tagging...
