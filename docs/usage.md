@@ -8,12 +8,12 @@ As an added precaution, the application will always fetch the latest tags on the
 ## Command-line usage
 
 ```
-USAGE: ./autotag.sh INCREMENT [-p] [-h]
+USAGE: ./autotag.sh LEVEL [-p] [-h]
 
 Increment git tag using given increment level.
 
 Positional arguments:
-    LEVEL       : One of M|m|b for major, minor or bug.
+    LEVEL       : "M" for major, "m" for minor or "b" for bug.
 
 Flags:
     -h --help   : Show help and exit.
@@ -21,7 +21,6 @@ Flags:
 ```
 
 As with tagging the normal way, it is recommended to be on the `master` branch before creating a tag, otherwise the tag may not be meaningful in a sequence (especially if the feature branch is behind `master`).
-
 
 
 ## Example usage
@@ -57,6 +56,8 @@ Last tag: v0.1.1
 New tag: v0.2.0
 Skipping tag creation
 ```
+
+If there are no tags yet, then `v0.0.0` will be implied as the starting point for incrementing levels.
 
 
 ## Delete tag
