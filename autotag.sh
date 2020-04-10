@@ -7,12 +7,13 @@
 #
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 
-USAGE='USAGE: ./autotag.sh INCREMENT [-p] [-h]
+FALLBACK_TAG='v0.0.0'
+USAGE='USAGE: ./autotag.sh LEVEL [-p] [-h]
 
-Increment git tag using given incremental level.
+Increment git tag using given increment level.
 
 Positional arguments:
-    LEVEL       : One of M|m|b for major, minor or bug.
+    LEVEL       : "M" for major, "m" for minor or "b" for bug.
 
 Flags:
     -h --help   : Show help and exit.
@@ -23,7 +24,7 @@ if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
     echo "$USAGE"
     exit 1
 fi
-INCREMENT_CHOICE=$1
+LEVEL_CHOICE=$1
 
 if [[ "$2" ]]; then
     if [[ "$2" == '-p' ]] || [[ "$2" == '--preview' ]]; then
@@ -44,7 +45,7 @@ git fetch --tags
 echo 'Auto tagging...'
 
 LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
-LAST_TAG=${LAST_TAG:-'v0.0.0'}
+LAST_TAG=${LAST_TAG:-$FALLBACK_TAG}
 LAST_TAG="${LAST_TAG/v/}"
 
 # Replace dot with space then split into array.
@@ -56,7 +57,7 @@ BUG=${LAST_TAG_ARR[2]}
 
 echo "Last tag: v$MAJOR.$MINOR.$BUG"
 
-case $INCREMENT_CHOICE in
+case $LEVEL_CHOICE in
 "M")
     ((MAJOR += 1))
     MINOR=0
