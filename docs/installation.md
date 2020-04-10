@@ -26,7 +26,7 @@ Download the AutoTag script to that directory. For example:
 curl -O 'https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
 ```
 
-You can replace `master` here with a tag number.
+You can replace `master` here with a valid [tag](https://github.com/MichaelCurrin/auto-tag/tags) version.
 
 
 ## Change permissions
