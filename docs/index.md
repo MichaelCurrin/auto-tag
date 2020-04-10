@@ -5,7 +5,8 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE)
 
-## 📘 Documentation
+
+## Menu
 
 - [ℹ️ About](about)
 - [📦 Installation](installation)
