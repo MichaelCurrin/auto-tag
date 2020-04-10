@@ -1,4 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# AutoTag application.
+#
+# MIT License
+#
+# Copyright (c) 2020 MichaelCurrin
+#
+# https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 
 USAGE='USAGE: ./autotag.sh INCREMENT [-p] [-h]
 
