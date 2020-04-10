@@ -1,5 +1,7 @@
 # 📦 Installation
 
+**Table of contents:**
+
 - [Download](#download)
 - [Change permissions](#change-permissions)
 - [Test](#test)

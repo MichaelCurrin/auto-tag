@@ -1,5 +1,7 @@
 # 🚧 Development
 
+**Table of contents:**
+
 - [Setup](#setup)
 - [Run](#run)
 

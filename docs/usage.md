@@ -1,5 +1,7 @@
 # ⛵ Usage
 
+**Table of contents:**
+
 - [Fetching](#fetching)
 - [Command-line usage](#command-line-usage)
 - [Example usage](#example-usage)
