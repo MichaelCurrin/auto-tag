@@ -7,6 +7,30 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE)
 
+Uses the semantic versioning standard.
+
+
+## Example usage
+
+Increment a repo by bug level.
+
+```sh
+$ autotag b
+```
+```
+Auto tagging...
+Last tag: v0.1.0
+New tag: v0.1.1
+Creating annotated tag...
+```
+
+Push the tag.
+
+```sh
+git push v0.1.1
+```
+
+## Menu
 
 - [ℹ️ About](about)
 - [📦 Installation](installation)
