@@ -1,5 +1,5 @@
 # AutoTag docs homepage 🤖 🏷️
-> Take the hassle out of incrementing a tag version with Auto-Tag shell tool
+> Take the hassle out of incrementing a tag version with AutoTag shell tool
 
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)](https://www.gnu.org/software/bash/)
 [![Repo stars](https://img.shields.io/github/stars/MichaelCurrin/auto-tag?style=social)](https://github.com/MichaelCurrin/auto-tag)
