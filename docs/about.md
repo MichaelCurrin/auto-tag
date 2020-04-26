@@ -73,4 +73,4 @@ The application is a single script. There are no external dependencies.
 Inspiration for this project comes from the following:
 
 - [Automatic tagging of releases](https://stackoverflow.com/questions/3760086/automatic-tagging-of-releases)
-- [Gist](https://gist.github.com/dtiemann83/cfa16ade69a3ea451ad760d4118a9351)
+- [Gist](https://gist.github.com/dtiemann83/cfa16ade69a3ea451ad760d4118a9351) by `dtiemann83`.
