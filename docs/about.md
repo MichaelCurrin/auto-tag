@@ -12,15 +12,14 @@
 
 ## 🚀 Purpose
 
-When creating a [git tag](https://github.com/MichaelCurrin/learn-to-code/blob/master/Version%20control/Git/tags.md) in your project and want to create a new tag, run the Auto-Tag tool. Specify a major, minor or bug level and it will determine the appropriate next tag level based on the latest tag, then it will create it for you.
-
-It says you time, effort and the chance of making a mistake.
-
-With Auto-Tag, you do **not** have to:
-
-- know to check latest tag is
-- do a mental calculation
-- type out the tag in full
+- Auto-Tag can be used whenever you want to create a new [tag](https://github.com/MichaelCurrin/learn-to-code/blob/master/en/topics/version_control/Git/tags.md) in your `git` project.
+- Specify a level as major, minor or bug level. 
+- Auto-Tag will determine the appropriate next tag level based on the latest tag on the local and remote repos. Then it will create it for you, or just show a preview if using a dry run.
+- You get to **skip** doing these tedious tasks:
+    - remember to pull remote tags
+    - find what the latest tag
+    - do a mental calculation to figure out the next number
+    - type out the tag in full without making a typo
 
 
 ## 🎚️ Versioning sequence
