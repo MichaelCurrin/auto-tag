@@ -1,4 +1,4 @@
-# AutoTag docs 🤖 🏷️
+# AutoTag docs homepage 🤖 🏷️
 > Take the hassle out of incrementing a tag version with Auto-Tag shell tool
 
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)](https://www.gnu.org/software/bash/)
