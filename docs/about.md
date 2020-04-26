@@ -4,22 +4,33 @@
 **Table of contents:**
 
 - [🚀 Purpose](#-purpose)
+- [🎛️ What it does](#️-what-it-does)
 - [🎚️ Versioning sequence](#️-versioning-sequence)
-- [🎛️ How it works](#️-how-it-works)
 - [💽 Pre-requisites](#-pre-requisites)
 - [📚 Resources](#-resources)
 
 
 ## 🚀 Purpose
 
-- Auto-Tag can be used whenever you want to create a new [tag](https://github.com/MichaelCurrin/learn-to-code/blob/master/en/topics/version_control/Git/tags.md) in your `git` project.
-- Specify a level as major, minor or bug level. 
-- Auto-Tag will determine the appropriate next tag level based on the latest tag on the local and remote repos. Then it will create it for you, or just show a preview if using a dry run.
-- You get to **skip** doing these tedious tasks:
-    - remember to pull remote tags
-    - find what the latest tag
-    - do a mental calculation to figure out the next number
-    - type out the tag in full without making a typo
+AutoTag can be used whenever you want to create a new [tag](https://github.com/MichaelCurrin/learn-to-code/blob/master/en/topics/version_control/Git/tags.md) in your `git` project.
+
+Specify a level as major, minor or bug level as per the [semvar sequence](#-versioning-sequence) standard and AutoTag will increment the tag appropriately in your repo.
+
+AutoTag streamlines your process as you no longer have to tasks that are error-prone or easy to forget.
+
+
+## 🎛️ What it does
+
+1. Fetch all tags on the remote.
+2. Read your latest _git_ tag
+3. Figure out and show label for the next tag.
+4. Actually create the tag, unless preview flag is used.
+
+
+**Notes:**
+
+- The tag will be of type _annotated_.
+- AutoTag was built to be run locally by hand, but you can add it as part of your release flow.
 
 
 ## 🎚️ Versioning sequence
@@ -45,20 +56,6 @@ So your new tag will be `v0.2.0`.
 Note this project is only intended for versions with `v` prefix.
 
 
-## 🎛️ How it works
-
-When run, this Auto-Tag will:
-
-1. Fetch all tags on the remote.
-2. Read your latest _git_ tag
-3. Create and show label for the new tag.
-4. Actually create the tag.
-
-Note the tag will be of type _annotated_.
-
-Auto-Tag was built to be run locally by hand, but you can add it as part of your release flow.
-
-
 ## 💽 Pre-requisites
 
 Note this was written for Unix-like systems (Linux and macOS).
@@ -66,6 +63,7 @@ Note this was written for Unix-like systems (Linux and macOS).
 So you just need [Bash](https://github.com/MichaelCurrin/learn-to-code/blob/master/Shell/Bash/README.md) shell installed.
 
 The application is a single script. There are no external dependencies.
+
 
 ## 📚 Resources
 
