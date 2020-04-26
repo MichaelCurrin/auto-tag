@@ -1,13 +1,5 @@
 # 📦 Installation
 
-**Table of contents:**
-
-- [Download](#download)
-- [Change permissions](#change-permissions)
-- [Test](#test)
-- [Alias](#alias)
-- [Update](#update)
-
 
 ## Download
 
@@ -26,7 +18,7 @@ Download the AutoTag script to that directory. For example:
 curl -O 'https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
 ```
 
-You can replace `master` here with a valid [tag](https://github.com/MichaelCurrin/auto-tag/tags) version.
+To get specific release, replace `master` with a valid [tag](https://github.com/MichaelCurrin/auto-tag/tags) version.
 
 
 ## Change permissions
