@@ -13,6 +13,6 @@
 
 ## ⚖️ License
 
-License with [MIT](/LICENSE).
-
-Feel free to use and modify. Please include this license in your repo or copy of the script.
+- Released under [MIT](/LICENSE).
+- Feel free to use and modify. 
+- Please include this license in your repo or copy of the script.
