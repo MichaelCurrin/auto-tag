@@ -3,14 +3,14 @@
 
 **Table of contents:**
 
-- [🧑‍🚀 Purpose](#-purpose)
+- [🚀 Purpose](#-purpose)
 - [🎚️ Versioning sequence](#️-versioning-sequence)
 - [🎛️ How it works](#️-how-it-works)
 - [💽 Pre-requisites](#-pre-requisites)
-- [� Resources](#-resources)
+- [📚 Resources](#-resources)
 
 
-## 🧑‍🚀 Purpose
+## 🚀 Purpose
 
 When creating a [git tag](https://github.com/MichaelCurrin/learn-to-code/blob/master/Version%20control/Git/tags.md) in your project and want to create a new tag, run the Auto-Tag tool. Specify a major, minor or bug level and it will determine the appropriate next tag level based on the latest tag, then it will create it for you.
 
