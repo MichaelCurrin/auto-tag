@@ -77,7 +77,7 @@ If you are happy with the tag, you can push it. This will push all local tags.
 $ git push --tags
 ```
 
-Note that this **only** pushes tags. So you'll still need to do a standard push.
+The command above will not push the branch, so you should also do a standard push.
 
 ```sh
 $ git push
