@@ -8,7 +8,7 @@
 
 ## 📖 Documentation
 
-[![Online docs](https://img.shields.io/badge/docs-Github-Pages-blue.svg?style=for-the-badge)](https://michaelcurrin.github.io/auto-tag/)
+[![Online docs](https://img.shields.io/badge/docs-Github_Pages-blue.svg?style=for-the-badge)](https://michaelcurrin.github.io/auto-tag/)
 
 
 ## ⚖️ License
