@@ -40,12 +40,17 @@ $ <PATH_TO>/autotag M --preview
 
 ### Using a bin directory
 
-Optionally add the script to your bin.
+Optionally add the script to a bin directory that is in your `PATH`.
+
+Example:
 
 ```sh
-$ cd ~/bin
-$ ln -s <PATH_TO>/auto-tag/autotag
+mkdir -p ~/bin
+cd ~/bin
+ln -s ~/repos/auto-tag/autotag
 ```
+
+Run from a repo:
 
 ```sh
 $ autotag M --preview
