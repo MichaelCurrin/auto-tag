@@ -62,7 +62,7 @@ echo "Last tag: v$MAJOR.$MINOR.$BUG"
 
 # Although the exit only happens after fetching, this needs to happen here so variables are set.
 # Otherwise a refactor is needed to check M|m|b and exit if needed, then actually calculate here.
-case $LEVEL_CHOICE in
+case "$LEVEL_CHOICE" in
 "M")
   ((MAJOR += 1))
   MINOR=0
