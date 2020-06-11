@@ -32,7 +32,7 @@ git push v0.1.1
 
 ## Alternative
 
-If you're already using Node.js in your project, consider using the builtin [npm version](https://github.com/MichaelCurrin/cheatsheets/blob/master/cheatsheets/javascript/npm/version.md) command instead.
+If you're already using Node.js and you have `package.json` in your proejct, consider using the builtin [npm version](https://github.com/MichaelCurrin/cheatsheets/blob/master/cheatsheets/javascript/npm/version.md) command instead.
 
 
 ## Menu
