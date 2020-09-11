@@ -8,6 +8,7 @@
 - [🎚️ Versioning sequence](#️-versioning-sequence)
 - [💽 Pre-requisites](#-pre-requisites)
 - [📚 Resources](#-resources)
+- [🤔 Alternatives](#-alternatives)
 
 
 ## 🚀 Purpose
@@ -71,3 +72,10 @@ Inspiration for this project comes from the following:
 
 - [Automatic tagging of releases](https://stackoverflow.com/questions/3760086/automatic-tagging-of-releases)
 - A [gist](https://gist.github.com/dtiemann83/cfa16ade69a3ea451ad760d4118a9351) by `dtiemann83`.
+
+
+## 🤔 Alternatives
+
+If you're already using Node.js and you have `package.json` in your project, consider using the builtin [npm version](https://github.com/MichaelCurrin/cheatsheets/blob/master/cheatsheets/javascript/npm/version.md) command instead. It is widely used (unlike AutoTag) and already comes with NPM. It handles the same functionality as AutoTag in incrementing to major, minor or bug fix, plus it _also_ increments the version in your `package.json`.
+
+AutoTag is great for repos that doesn't use NPM and also AutoTag makes sure to fetch remote tags first which `npm version` does not (though maybe it is less important there since the tag object will match the value in package.json file).
