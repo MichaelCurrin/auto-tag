@@ -78,10 +78,16 @@ Inspiration for this project comes from the following:
 
 If you're already using Node.js + NPm and you have a `package.json` file in your project, you could make use of the builtin [npm version][] command instead of AutoTag.
 
-e.g.
+For example:
 
 ```sh
 $ npm version minor
+```
+
+Which is similar to:
+
+```sh
+$ autotag m
 ```
 
 ### Reasons to use npm version
