@@ -74,8 +74,27 @@ Inspiration for this project comes from the following:
 - A [gist](https://gist.github.com/dtiemann83/cfa16ade69a3ea451ad760d4118a9351) by `dtiemann83`.
 
 
-## 🤔 Alternatives
+## 🤔 Tagging and NPM
 
-If you're already using Node.js and you have `package.json` in your project, consider using the builtin [npm version](https://github.com/MichaelCurrin/cheatsheets/blob/master/cheatsheets/javascript/npm/version.md) command instead. It is widely used (unlike AutoTag) and already comes with NPM. It handles the same functionality as AutoTag in incrementing to major, minor or bug fix, plus it _also_ increments the version in your `package.json`.
+If you're already using Node.js + NPm and you have a `package.json` file in your project, you could make use of the builtin [npm version][] command instead of AutoTag.
 
-AutoTag is great for repos that doesn't use NPM and also AutoTag makes sure to fetch remote tags first which `npm version` does not (though maybe it is less important there since the tag object will match the value in package.json file).
+e.g.
+
+```sh
+$ npm version minor
+```
+
+### Reasons to use npm version
+
+- The NPM version command is builtin to NPM.
+- It already known used by dev community (unlike AutoTag).
+- It handles the same functionality as AutoTag in incrementing to major, minor or bug fix, plus that _also_ increments the version in your `package.json`.
+- It works with NPM scripts like `pre-version`.
+
+### Reason to use AutoTag
+
+AutoTag is great for repos that don't use NPM.
+
+AutoTag makes sure to _fetch_ remote tags first, which `npm version` does not (though maybe it is less important there since the tag object will match the value in package.json file).
+
+[npm version]: https://github.com/MichaelCurrin/cheatsheets/blob/master/cheatsheets/javascript/npm/version.md
