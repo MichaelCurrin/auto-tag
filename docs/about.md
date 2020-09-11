@@ -101,6 +101,8 @@ $ autotag m
 
 AutoTag is great for repos that don't use NPM.
 
-AutoTag makes sure to _fetch_ remote tags first, which `npm version` does not (though maybe it is less important there since the tag object will match the value in package.json file).
+AutoTag makes sure to _fetch_ remote tags first, which `npm version` does not. Which means `npm version` might end up creating a tag locally which already exists on the remote - created as a tag on GitHub directly. Unless one also remembers to edit `package.json` on GitHub before making the tag.
+
+However, this risk can be avoided for NPM projects if you make sure to use a `"version"` field in your `package.json` file and avoid tagging in GitHub directly. This approach will work as if you have the latest `master` branch, as the value of the `"version"` field will reflect the latest tag on the remote master, even if you don't have the tag locally.
 
 [npm version]: https://github.com/MichaelCurrin/cheatsheets/blob/master/cheatsheets/javascript/npm/version.md
