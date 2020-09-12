@@ -94,7 +94,8 @@ $ autotag m
 
 - The NPM version command is builtin to NPM.
 - It already known used by dev community (unlike AutoTag).
-- It handles the same functionality as AutoTag in incrementing to major, minor or bug fix, plus that _also_ increments the version in your `package.json`.
+- It handles the same functionality as AutoTag in incrementing to major, minor or bug fix
+- Plus it _also_ increments the version in your `package.json`. This change requires a commit, which `npm version` does for you, using `0.2.0` for example as the commit message as `v0.2.0` as the tag.
 - It works with NPM scripts like `pre-version`.
 
 ### Reason to use AutoTag
