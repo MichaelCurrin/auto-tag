@@ -74,7 +74,8 @@ Inspiration for this project comes from the following:
 - A [gist](https://gist.github.com/dtiemann83/cfa16ade69a3ea451ad760d4118a9351) by `dtiemann83`.
 
 
-## 🤔 Tagging and NPM
+## 🤔 Alternatives
+> Comparing AutoTag and the `npm version` command
 
 If you're already using Node.js + NPM and you have a `package.json` file in your project, you could make use of the builtin [npm version][] command instead of AutoTag.
 
