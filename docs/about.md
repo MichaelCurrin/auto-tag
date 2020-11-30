@@ -76,7 +76,7 @@ Inspiration for this project comes from the following:
 
 ## 🤔 Tagging and NPM
 
-If you're already using Node.js + NPm and you have a `package.json` file in your project, you could make use of the builtin [npm version][] command instead of AutoTag.
+If you're already using Node.js + NPM and you have a `package.json` file in your project, you could make use of the builtin [npm version][] command instead of AutoTag.
 
 For example:
 
@@ -90,11 +90,22 @@ Which is similar to:
 $ autotag m
 ```
 
-### Reasons to use npm version
+### Aliases
 
-- The NPM version command is builtin to NPM.
+I like to configure aliases to make using `npm version` easier.
+
+```sh
+alias nv='npm version minor'
+alias nv-M='npm version major'
+alias nv-b='npm version patch'
+```
+
+### Reasons to use `npm version`
+
+- The NPM version command is builtin for NPM.
 - It already known used by dev community (unlike AutoTag).
-- It handles the same functionality as AutoTag in incrementing to major, minor or bug fix
+- It already handles the same functionality as AutoTag in incrementing to major, minor or bug fix.
+- It integrations with other parts of NPM running your `preversion`, `version` and `postversion` commands in your `package.json` file.
 - Plus it _also_ increments the version in your `package.json`. This change requires a commit, which `npm version` does for you, using `0.2.0` for example as the commit message as `v0.2.0` as the tag.
 - It works with NPM scripts like `pre-version`.
 
@@ -106,4 +117,4 @@ AutoTag makes sure to _fetch_ remote tags first, which `npm version` does not. W
 
 However, this risk can be avoided for NPM projects if you make sure to use a `"version"` field in your `package.json` file and avoid tagging in GitHub directly. This approach will work as if you have the latest `master` branch, as the value of the `"version"` field will reflect the latest tag on the remote master, even if you don't have the tag locally.
 
-[npm version]: https://github.com/MichaelCurrin/cheatsheets/blob/master/cheatsheets/javascript/npm/version.md
+[npm version]: https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/javascript/npm/commands/version.html
