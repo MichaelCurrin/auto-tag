@@ -45,7 +45,7 @@ echo 'Fetching tags...'
 
 git fetch --tags
 
-echo 'Finding last tag...'
+echo 'Finding most recent tag...'
 
 LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
 LAST_TAG="${LAST_TAG:-$FALLBACK_TAG}"
