@@ -30,7 +30,7 @@ LEVEL_CHOICE="$1"
 
 if [[ "$2" ]]; then
   if [[ "$2" == '-p' ]] || [[ "$2" == '--preview' ]]; then
-    PREVIEW=true
+    PREVIEW='true'
   else
     echo "Invalid arguments: \"$*\""
     echo
@@ -38,7 +38,7 @@ if [[ "$2" ]]; then
     exit 1
   fi
 else
-  PREVIEW=false
+  PREVIEW='false'
 fi
 
 echo 'Fetching tags...'
@@ -90,5 +90,5 @@ if [[ "$PREVIEW" == true ]]; then
   echo 'Skipping tag creation'
 else
   echo "Creating annotated tag..."
-  git tag -a $NEW_TAG -m $NEW_TAG
+  git tag -a "$NEW_TAG" -m "$NEW_TAG"
 fi
