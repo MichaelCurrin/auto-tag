@@ -1,12 +1,13 @@
 # AutoTag 🤖 🏷️
-> The hassle-free way to increment your git tag - a shell tool for devs with deadlines
+> The hassle-free way to increment your git tag - a Shell tool for devs with deadlines
 
-[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue?logo=gnu-bash)](https://www.gnu.org/software/bash/)
-[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE)
+[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/autotag?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/autotag/releases/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+
+[![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue?logo=gnu-bash)](https://www.gnu.org/software/bash/)
 
 
-## 📖 Documentation
+## Documentation 📖
 
 <div align="center">
 
@@ -15,8 +16,8 @@
 </div>
 
 
-## ⚖️ License
+## License ⚖️
 
-- Released under [MIT](/LICENSE).
+- Released under [MIT](/LICENSE) by [@MichaelCurrin](https://github.com/MichaelCurrin).
 - Feel free to use and modify.
 - Please include this license in your repo or copy of the script.
