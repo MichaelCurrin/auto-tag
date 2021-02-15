@@ -3,7 +3,7 @@
 #
 # MIT License
 #
-# Copyright (c) 2020 MichaelCurrin
+# Copyright (c) 2020 - 2021 MichaelCurrin
 #
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 
@@ -26,7 +26,7 @@ if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
   echo "$HELP"
   exit 1
 fi
-LEVEL_CHOICE=$1
+LEVEL_CHOICE="$1"
 
 if [[ "$2" ]]; then
   if [[ "$2" == '-p' ]] || [[ "$2" == '--preview' ]]; then
@@ -48,15 +48,15 @@ git fetch --tags
 echo 'Finding last tag...'
 
 LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
-LAST_TAG=${LAST_TAG:-$FALLBACK_TAG}
+LAST_TAG="${LAST_TAG:-$FALLBACK_TAG}"
 LAST_TAG="${LAST_TAG/v/}"
 
 # Replace dot with space then split into array.
 LAST_TAG_ARR=(${LAST_TAG//./ })
 
-MAJOR=${LAST_TAG_ARR[0]}
-MINOR=${LAST_TAG_ARR[1]}
-BUG=${LAST_TAG_ARR[2]}
+MAJOR="${LAST_TAG_ARR[0]}"
+MINOR="${LAST_TAG_ARR[1]}"
+BUG="${LAST_TAG_ARR[2]}"
 
 echo "Last tag: v$MAJOR.$MINOR.$BUG"
 
