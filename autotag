@@ -48,6 +48,19 @@ git fetch --tags
 echo 'Finding most recent tag...'
 
 LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
+
+# Ensure that tag is not created on same commit as current branch commit
+if [[ ! -z "$LAST_TAG" ]]; then
+  CURRENT_BRANCH=$(git branch --show-current)
+  BRANCH_HASH=$(git rev-list -n 1 $CURRENT_BRANCH)
+  LAST_TAG_HASH=$(git rev-list -n 1 $LAST_TAG)
+
+  if [[ "$BRANCH_HASH" = "$LAST_TAG_HASH" ]]; then
+    echo "Last tag is on the same commit as current branch";
+    exit 0;
+  fi
+fi
+
 LAST_TAG="${LAST_TAG:-$FALLBACK_TAG}"
 LAST_TAG="${LAST_TAG/v/}"
 
