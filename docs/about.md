@@ -103,7 +103,7 @@ alias nv-b='npm version patch'
 
 ### Reasons to use `npm version`
 
-- The NPM version command is builtin for NPM.
+- The NPM version command is built-in for NPM.
 - It already known used by dev community (unlike AutoTag).
 - It already handles the same functionality as AutoTag in incrementing to major, minor or bug fix.
 - It integrations with other parts of NPM running your `preversion`, `version` and `postversion` commands in your `package.json` file.
@@ -112,7 +112,7 @@ alias nv-b='npm version patch'
 
 ### Reason to use AutoTag
 
-AutoTag is great for repos that don't use NPM.
+AutoTag is great for repos in any programming language, especially those which don't use NPM.
 
 AutoTag makes sure to _fetch_ remote tags first, which `npm version` does not. Which means `npm version` might end up creating a tag locally which already exists on the remote - created as a tag on GitHub directly. Unless one also remembers to edit `package.json` on GitHub before making the tag.
 
