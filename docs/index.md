@@ -1,11 +1,10 @@
 # AutoTag docs homepage 🤖 🏷️
 > Take the hassle out of incrementing a tag version with AutoTag shell tool
 
-[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue?logo=gnu-bash)](https://www.gnu.org/software/bash/)
 [![Repo stars](https://img.shields.io/github/stars/MichaelCurrin/auto-tag?style=social)](https://github.com/MichaelCurrin/auto-tag)
 [![Repo forks](https://img.shields.io/github/forks/MichaelCurrin/auto-tag?style=social)](https://github.com/MichaelCurrin/auto-tag)
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag.svg)](https://GitHub.com/MichaelCurrin/auto-tag/tags/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE)
+[![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
 A shell tool to increment the git tag for the current repo by a given level (e.g. minor), using the semantic versioning standard.
 
@@ -16,7 +15,7 @@ This can be installed as a user-level _bin_ executable so it can be run from any
 
 ## Example usage
 
-Increment a repo by bug level.
+Increment a version by bug/patch level.
 
 ```sh
 $ autotag b
