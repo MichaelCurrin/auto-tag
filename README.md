@@ -1,7 +1,7 @@
 # AutoTag 🤖 🏷️
 > The hassle-free way to increment your git tag - a Shell tool for devs with deadlines
 
-[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/autotag?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/autotag/releases/)
+[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/auto-tag/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 [![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue?logo=gnu-bash)](https://www.gnu.org/software/bash/)
