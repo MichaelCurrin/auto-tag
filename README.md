@@ -7,21 +7,11 @@
 [![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
 
-## Sample usage
+## Preview
 
-Specify the tag increment level and the tool will figure out the next tag version and create the tag.
-
-Here we increment the git version by bug/patch level, from `v0.1.0` to `v0.1.1`.
-
-```sh
-$ autotag b
-```
-```
-Auto tagging...
-Last tag: v0.1.0
-New tag: v0.1.1
-Creating annotated tag...
-```
+<div align="center">
+    <img src="/sample.png" alt="Sample screenshot" title="Sample screenshot" width="400" />
+</div>
 
 
 ## Documentation 📖
@@ -37,4 +27,4 @@ Creating annotated tag...
 
 - Released under [MIT](/LICENSE) by [@MichaelCurrin](https://github.com/MichaelCurrin).
 - Feel free to use and modify.
-- Please include this license in your repo or copy of the script.
+- Please keep the license link that is in the script.
