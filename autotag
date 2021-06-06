@@ -19,7 +19,7 @@ Positional arguments:
 
 Flags:
     -h --help   : Show help and exit.
-    -p --preview: Dry run to show new tag label and not actually create it.
+    -p --preview: Do a dry run to show the new tag label only, without creating it.
 "
 
 if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
