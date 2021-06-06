@@ -76,7 +76,7 @@ case "$LEVEL_CHOICE" in
   ((BUG += 1))
   ;;
 *)
-  echo "🛑 Invalid arguments: \"$*\""
+  echo "🛑 Invalid arguments: '$*'"
   echo
   echo "$USAGE"
   exit 1
@@ -89,6 +89,6 @@ echo "⭐ New tag: $NEW_TAG"
 if [[ "$PREVIEW" == true ]]; then
   echo '⏭️ Skipping tag creation'
 else
-  echo "🏷️ Creating annotated tag..."
+  echo '🏷️ Creating annotated tag...'
   git tag -a "$NEW_TAG" -m "$NEW_TAG"
 fi
