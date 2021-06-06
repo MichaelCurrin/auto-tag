@@ -76,7 +76,7 @@ case "$LEVEL_CHOICE" in
   ((BUG += 1))
   ;;
 *)
-  echo "Invalid arguments: \"$*\""
+  echo "🛑 Invalid arguments: \"$*\""
   echo
   echo "$USAGE"
   exit 1
