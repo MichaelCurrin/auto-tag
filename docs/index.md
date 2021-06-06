@@ -13,7 +13,9 @@ This saves you having to check the last known tag and to exactly type the next o
 This can be installed as a user-level _bin_ executable so it can be run from anywhere.
 
 
-## Example usage
+## Sample usage
+
+Specify the tag increment level and the tool will figure out the next tag version and create the tag.
 
 Increment a version by bug/patch level.
 
@@ -27,13 +29,13 @@ New tag: v0.1.1
 Creating annotated tag...
 ```
 
-Push the commit and all tags.
+Then push the commit and all tags.
 
 ```sh
 $ git push && git push --tags
 ```
 
-Or push just one tag:
+Or push just the one tag:
 
 ```sh
 $ git push v0.1.1
