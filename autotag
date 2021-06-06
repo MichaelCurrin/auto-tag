@@ -58,7 +58,7 @@ MAJOR="${LAST_TAG_ARR[0]}"
 MINOR="${LAST_TAG_ARR[1]}"
 BUG="${LAST_TAG_ARR[2]}"
 
-echo "🏷️ 👴 Last tag: v$MAJOR.$MINOR.$BUG"
+echo "👴 Last tag: v$MAJOR.$MINOR.$BUG"
 
 # Although the exit only happens after fetching, this needs to happen here so variables are set.
 # Otherwise a refactor is needed to check M|m|b and exit if needed, then actually calculate here.
@@ -84,11 +84,11 @@ case "$LEVEL_CHOICE" in
 esac
 
 NEW_TAG="v$MAJOR.$MINOR.$BUG"
-echo "🏷️ ⭐ New tag: $NEW_TAG"
+echo "⭐ New tag: $NEW_TAG"
 
 if [[ "$PREVIEW" == true ]]; then
   echo '⏭️ Skipping tag creation'
 else
-  echo "🏭 Creating annotated tag..."
+  echo "🏷️ Creating annotated tag..."
   git tag -a "$NEW_TAG" -m "$NEW_TAG"
 fi
