@@ -8,6 +8,7 @@
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 
 FALLBACK_TAG='v0.0.0'
+ALLOWED_BRANCHES='master|main|develop|dev|edge'
 
 USAGE='USAGE: autotag LEVEL [-p] [-h]'
 HELP="$USAGE
@@ -21,6 +22,13 @@ Flags:
     -h --help   : Show help and exit.
     -p --preview: Do a dry run to show the new tag label only, without creating it.
 "
+
+checks() {
+  if git describe --tags --exact-match &>/dev/null; then
+    echo '🛑 Commit is already tagged - aborting.'
+    exit 1
+  fi
+}
 
 if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
   echo "$HELP"
@@ -41,10 +49,7 @@ else
   PREVIEW='false'
 fi
 
-if git describe --tags --exact-match &>/dev/null; then
-  echo '🛑 Commit is already tagged - aborting'
-  exit 1
-fi
+checks
 
 echo '🚛 Fetching tags...'
 
