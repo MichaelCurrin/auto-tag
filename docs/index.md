@@ -17,7 +17,7 @@ This can be installed as a user-level _bin_ executable so it can be run from any
 
 Specify the tag increment level and the tool will figure out the next tag version and create the tag.
 
-Increment a version by bug/patch level.
+Here we increment the git version by bug/patch level, from `v0.1.0` to `v0.1.1`.
 
 ```sh
 $ autotag b
@@ -27,18 +27,6 @@ Auto tagging...
 Last tag: v0.1.0
 New tag: v0.1.1
 Creating annotated tag...
-```
-
-Then push the commit and all tags.
-
-```sh
-$ git push && git push --tags
-```
-
-Or push just the one tag:
-
-```sh
-$ git push v0.1.1
 ```
 
 
