@@ -41,6 +41,11 @@ else
   PREVIEW='false'
 fi
 
+if git describe --tags --exact-match &>/dev/null; then
+  echo '🛑 Commit is already tagged - aborting'
+  exit 1
+fi
+
 echo '🚛 Fetching tags...'
 
 git fetch --tags
