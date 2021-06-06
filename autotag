@@ -28,6 +28,19 @@ checks() {
     echo '🛑 Commit is already tagged - aborting.'
     exit 1
   fi
+
+  local BRANCH=$(git branch --show-current)
+
+  if [[ -z "$BRANCH" ]]; then
+    echo '🛑 You appear to be checked out on a commit or tag. Please check out a branch.'
+    exit 1
+  fi
+
+  if [[ ! "$BRANCH" =~ "$ALLOWED_BRANCHES" ]]; then
+    echo "🛑 You appear to be on a feature branch. Please check out your repo's default branch"
+    echo "Allowed branches are: $ALLOWED_BRANCHES"
+    exit 1
+  fi
 }
 
 if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
