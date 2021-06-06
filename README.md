@@ -4,14 +4,14 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/auto-tag?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/auto-tag/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
-[![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue?logo=gnu-bash)](https://www.gnu.org/software/bash/)
+[![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
 
 ## Documentation 📖
 
 <div align="center">
 
-[![Online docs](https://img.shields.io/badge/docs-Github_Pages-blue.svg?style=for-the-badge)](https://michaelcurrin.github.io/auto-tag/)
+[![Online docs](https://img.shields.io/badge/view-Online_docs-blue?style=for-the-badge)](https://michaelcurrin.github.io/auto-tag/)
 
 </div>
 
