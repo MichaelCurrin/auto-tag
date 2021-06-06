@@ -32,7 +32,7 @@ if [[ "$2" ]]; then
   if [[ "$2" == '-p' ]] || [[ "$2" == '--preview' ]]; then
     PREVIEW='true'
   else
-    echo "Invalid arguments: \"$*\""
+    echo "🛑 Invalid arguments: \"$*\""
     echo
     echo "$USAGE"
     exit 1
@@ -41,11 +41,11 @@ else
   PREVIEW='false'
 fi
 
-echo 'Fetching tags...'
+echo '🚛 Fetching tags...'
 
 git fetch --tags
 
-echo 'Finding most recent tag...'
+echo '🔍 Finding most recent tag...'
 
 LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
 LAST_TAG="${LAST_TAG:-$FALLBACK_TAG}"
@@ -58,7 +58,7 @@ MAJOR="${LAST_TAG_ARR[0]}"
 MINOR="${LAST_TAG_ARR[1]}"
 BUG="${LAST_TAG_ARR[2]}"
 
-echo "Last tag: v$MAJOR.$MINOR.$BUG"
+echo "🏷️ 👴 Last tag: v$MAJOR.$MINOR.$BUG"
 
 # Although the exit only happens after fetching, this needs to happen here so variables are set.
 # Otherwise a refactor is needed to check M|m|b and exit if needed, then actually calculate here.
@@ -84,11 +84,11 @@ case "$LEVEL_CHOICE" in
 esac
 
 NEW_TAG="v$MAJOR.$MINOR.$BUG"
-echo "New tag: $NEW_TAG"
+echo "🏷️ ⭐ New tag: $NEW_TAG"
 
 if [[ "$PREVIEW" == true ]]; then
-  echo 'Skipping tag creation'
+  echo '⏭️ Skipping tag creation'
 else
-  echo "Creating annotated tag..."
+  echo "🏭 Creating annotated tag..."
   git tag -a "$NEW_TAG" -m "$NEW_TAG"
 fi
