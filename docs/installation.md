@@ -18,7 +18,7 @@ Download the AutoTag script to that directory. For example:
 curl -O 'https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
 ```
 
-To get specific release, replace `master` with a valid [tag](https://github.com/MichaelCurrin/auto-tag/tags) version for this project.
+To get a specific release, replace `master` with a valid [tag](https://github.com/MichaelCurrin/auto-tag/tags) version for this project.
 
 
 ## Change permissions
@@ -43,6 +43,7 @@ Test the command can be found.
 autotag --help
 ```
 
-## Update
 
-To update to script, repeat the [Download](#download) and [Change permissions](#change-permissions) steps.
+## Upgrade
+
+Follow the [Upgrade](upgrade) command.
