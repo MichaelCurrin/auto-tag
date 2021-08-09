@@ -55,11 +55,11 @@ download_update_if_needed() {
   if [[ "$#" -eq 0 ]] || [[ "$1" == '-u' ]] || [[ "$1" == '--upgrade' ]]; then
     SCRIPT_FILEPATH="$(realpath $0)"
 
-    echo "Current path: $SCRIPT_FILEPATH"
+    echo 'ℹ️ Current path: $SCRIPT_FILEPATH'
 
-    echo "Downloading latest script using curl"
-    curl "$DOWNLOAD_URL" >"$SCRIPT_FILEPATH"
-    echo "Done. Exiting."
+    echo '⬇️ Downloading latest script using curl'
+    curl -q "$DOWNLOAD_URL" >"$SCRIPT_FILEPATH"
+    echo '🚀 `autotag` script updated. Exiting.'
     exit 0
   fi
 }
