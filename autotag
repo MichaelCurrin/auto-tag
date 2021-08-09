@@ -10,9 +10,7 @@
 FALLBACK_TAG='v0.0.0'
 
 USAGE='USAGE: autotag LEVEL [-p] [-h]'
-HELP="$USAGE
-
-Increment git tag using given increment level.
+HELP="Increment git tag using given increment level.
 
 Positional arguments:
     LEVEL       : 'M' for major, 'm' for minor or 'b' for bug.
@@ -26,6 +24,7 @@ if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
   echo "$HELP"
   exit 1
 fi
+
 LEVEL_CHOICE="$1"
 
 if [[ "$2" ]]; then
@@ -33,6 +32,8 @@ if [[ "$2" ]]; then
     PREVIEW='true'
   else
     echo "🛑 Invalid arguments: \"$*\""
+    echo
+    echo "$HELP"
     echo
     echo "$USAGE"
     exit 1
@@ -90,5 +91,7 @@ if [[ "$PREVIEW" == true ]]; then
   echo '⏭️ Skipping tag creation'
 else
   echo '🏷️ Creating annotated tag...'
-  git tag -a "$NEW_TAG" -m "$NEW_TAG"
+  git tag \
+    -a "$NEW_TAG" \
+    -m "$NEW_TAG"
 fi
