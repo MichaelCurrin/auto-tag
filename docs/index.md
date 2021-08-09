@@ -17,16 +17,16 @@ This can be installed as a user-level _bin_ executable so it can be run from any
 
 Specify the tag increment level and the tool will figure out the next tag version and create the tag.
 
-Here we increment the git version by bug/patch level, from `v0.1.0` to `v0.1.1`.
+Here we increment the git version by minor level, from `v1.1.0` to `v1.2.0`.
 
 ```sh
-$ autotag b
+$ autotag m
 ```
 ```
-Auto tagging...
-Last tag: v0.1.0
-New tag: v0.1.1
-Creating annotated tag...
+🚛 Fetching tags...
+🔍 Finding most recent tag...
+👴 Last tag: v1.1.0
+⭐ New tag: v1.2.0
 ```
 
 
