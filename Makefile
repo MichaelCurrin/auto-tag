@@ -4,7 +4,7 @@ h help:
 	@grep '^[a-z]' Makefile
 
 
-show-help:
+tool-help:
 	./autotag || true
 
 
