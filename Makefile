@@ -28,4 +28,13 @@ test-bug:
 	# BUG
 	./autotag b --preview
 
-test: test-helps test-major test-minor test-bug
+test-bad-flag:
+	# BAD FLAG
+	./autotag M -x || true
+	./autotag M X || true
+
+test-bad-level:
+	# BAD LEVEL
+	./autotag A || true
+
+test: test-helps test-major test-minor test-bug test-bad-flag test-bad-level
