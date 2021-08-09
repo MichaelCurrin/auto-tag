@@ -88,12 +88,14 @@ case "$LEVEL_CHOICE" in
 esac
 
 NEW_TAG="v$MAJOR.$MINOR.$BUG"
-echo "⭐  New tag: $NEW_TAG"
+echo "⭐ New tag: $NEW_TAG"
 
+# For some reason these emojis need a double space after to avoid looking squashed, at least on
+# macOS.
 if [[ "$PREVIEW" == true ]]; then
   echo '⏭️  Skipping tag creation'
 else
-  echo '🏷️ Creating annotated tag...'
+  echo '🏷️  Creating annotated tag...'
   git tag \
     -a "$NEW_TAG" \
     -m "$NEW_TAG"
