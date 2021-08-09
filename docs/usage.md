@@ -3,7 +3,7 @@
 
 ## Note on fetching
 
-As an added precaution, the tool will always fetch the latest tags on the remote _before_ creating a tag. This is done to avoid accidentally creating a local tag that already exists on the remote but pointing to different commits.
+As an added precaution, the tool will always fetch the _latest_ tags on the remote _before_ creating a tag. This is done to avoid accidentally creating a local tag that _already_ exists on the remote but is pointing to a different commit.
 
 
 ## Command-line usage
@@ -11,14 +11,15 @@ As an added precaution, the tool will always fetch the latest tags on the remote
 ```
 USAGE: autotag LEVEL [-p] [-h]
 
-Increment git tag using given increment level.
+HELP:
+    Increment git tag using given increment level.
 
-Positional arguments:
-    LEVEL       : 'M' for major, 'm' for minor or 'b' for bug.
+    Positional arguments:
+        LEVEL       : 'M' for major, 'm' for minor or 'b' for bug.
 
-Flags:
-    -h --help   : Show help and exit.
-    -p --preview: Do a dry run to show the new tag label only, without creating it.
+    Flags:
+        -h --help   : Show help and exit.
+        -p --preview: Do a dry run to show the new tag label only, without creating it.
 ```
 
 As with tagging the normal way, it is recommended to be on the `master` branch before creating a tag, otherwise the tag may not be meaningful in a sequence (especially if the feature branch is behind `master`).
@@ -42,14 +43,12 @@ $ autotag b
 
 Output will be like this:
 
-```sh
+```console
 $ ./autotag b
-```
-```
-Auto tagging...
-Last tag: v0.1.0
-New tag: v0.1.1
-Creating annotated tag...
+🚛 Fetching tags...
+🔍 Finding most recent tag...
+👴 Last tag: v1.1.0
+⭐ New tag: v1.1.1
 ```
 
 ### Preview
