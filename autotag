@@ -22,6 +22,7 @@ HELP="HELP:
         -p --preview : Do a dry run to show the new tag label only, without creating it.
 "
 USER_ARGS="$*"
+DOWNLOAD_URL='https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
 
 # Dynamic variables. Unfortunately all are global but at least there are functions now so the script
 # is easier to work with. Also they don't have to be set here even, but are set for clarity.
@@ -30,8 +31,10 @@ PREVIEW=''
 MAJOR=''
 MINOR=''
 BUG=''
+LAST_TAG=''
+NEW_TAG=''
 
-need_help() {
+help_if_needed() {
   if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
     echo "$USAGE"
     echo "$HELP"
@@ -44,6 +47,17 @@ invalid_args_error() {
   echo
   echo "$USAGE"
   exit 1
+}
+
+download_update_if_needed() {
+  SCRIPT_FILEPATH="$(realpath $0)"
+
+  echo "Current path: $SCRIPT_FILEPATH"
+
+  echo "Downloading latest script using curl"
+  curl "$DOWNLOAD_URL" >"$SCRIPT_FILEPATH"
+  echo "Done. Exiting."
+  exit 0
 }
 
 process_args() {
@@ -124,7 +138,8 @@ run() {
 }
 
 main() {
-  need_help $@
+  help_if_needed $@
+  download_update_if_needed $@
   process_args $@
   run
 }
