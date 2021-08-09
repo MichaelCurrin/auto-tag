@@ -94,19 +94,10 @@ The command above will _not_ push the commits, so you should also do a standard 
 $ git push && git push --tags
 ```
 
-### Upgrade
+## Upgrade
 
-Get the latest version of AutoTag from GitHub.
-
-If not installed with Git, you can run this command for the script to update itself.
+See the [Upgrade](upgrade.md) doc for more info.
 
 ```sh
 $ ./autotag --upgrade
-```
-
-If you clone this repo somewhere, you can use it. e.g.
-
-```sh
-$ cd ~/repos/auto-tag
-$ git pull
 ```
