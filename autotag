@@ -6,6 +6,7 @@
 # Copyright (c) 2020 - 2021 MichaelCurrin
 #
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
+set -e
 
 FALLBACK_TAG='v0.0.0'
 USAGE='USAGE:
