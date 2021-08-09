@@ -1,11 +1,6 @@
 # ⛵ Usage
 
 
-## Note on fetching
-
-As an added precaution, the tool will always fetch the _latest_ tags on the remote _before_ creating a tag. This is done to avoid accidentally creating a local tag that _already_ exists on the remote but is pointing to a different commit.
-
-
 ## Command-line usage
 
 ```
@@ -28,6 +23,13 @@ HELP:
 ```
 
 As with tagging the normal way, it is recommended to be on the `master` branch before creating a tag. Otherwise, the tag may not be meaningful in a sequence (especially if the feature branch is behind `master`).
+
+
+## Fetching
+
+As an added precaution, the tool will always fetch the _latest_ tags on the GitHub remote _before_ creating a tag. Even if just doing a preview.
+
+This is done to avoid accidentally creating a local tag with a name that _already_ exists on the remote and therefore causing conflict.
 
 
 ## Examples
