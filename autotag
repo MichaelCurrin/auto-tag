@@ -9,18 +9,22 @@
 
 FALLBACK_TAG='v0.0.0'
 
-USAGE='USAGE: autotag LEVEL [-p] [-h]'
-HELP="Increment git tag using given increment level.
+USAGE='USAGE:
+    autotag LEVEL [-p] [-h]
+'
+HELP='HELP:
+    Increment git tag using given increment level.
 
-Positional arguments:
-    LEVEL       : 'M' for major, 'm' for minor or 'b' for bug.
+    Positional arguments:
+        LEVEL       : 'M' for major, 'm' for minor or 'b' for bug.
 
-Flags:
-    -h --help   : Show help and exit.
-    -p --preview: Do a dry run to show the new tag label only, without creating it.
-"
+    Flags:
+        -h --help   : Show help and exit.
+        -p --preview: Do a dry run to show the new tag label only, without creating it.
+'
 
 if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
+  echo "$USAGE"
   echo "$HELP"
   exit 1
 fi
@@ -33,9 +37,8 @@ if [[ "$2" ]]; then
   else
     echo "🛑 Invalid arguments: \"$*\""
     echo
-    echo "$HELP"
-    echo
     echo "$USAGE"
+    echo "$HELP"
     exit 1
   fi
 else
@@ -85,10 +88,10 @@ case "$LEVEL_CHOICE" in
 esac
 
 NEW_TAG="v$MAJOR.$MINOR.$BUG"
-echo "⭐ New tag: $NEW_TAG"
+echo "⭐  New tag: $NEW_TAG"
 
 if [[ "$PREVIEW" == true ]]; then
-  echo '⏭️ Skipping tag creation'
+  echo '⏭️  Skipping tag creation'
 else
   echo '🏷️ Creating annotated tag...'
   git tag \
