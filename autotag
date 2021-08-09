@@ -20,6 +20,8 @@ HELP="HELP:
     Flags:
         -h --help    : Show help and exit.
         -p --preview : Do a dry run to show the new tag label only, without creating it.
+        -u --upgrade : Download latest script from GitHub and write over current script to
+                       install it. Uses cURL and not Git.
 "
 USER_ARGS="$*"
 DOWNLOAD_URL='https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
@@ -50,14 +52,16 @@ invalid_args_error() {
 }
 
 download_update_if_needed() {
-  SCRIPT_FILEPATH="$(realpath $0)"
+  if [[ "$#" -eq 0 ]] || [[ "$1" == '-u' ]] || [[ "$1" == '--upgrade' ]]; then
+    SCRIPT_FILEPATH="$(realpath $0)"
 
-  echo "Current path: $SCRIPT_FILEPATH"
+    echo "Current path: $SCRIPT_FILEPATH"
 
-  echo "Downloading latest script using curl"
-  curl "$DOWNLOAD_URL" >"$SCRIPT_FILEPATH"
-  echo "Done. Exiting."
-  exit 0
+    echo "Downloading latest script using curl"
+    curl "$DOWNLOAD_URL" >"$SCRIPT_FILEPATH"
+    echo "Done. Exiting."
+    exit 0
+  fi
 }
 
 process_args() {
