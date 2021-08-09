@@ -10,7 +10,7 @@ set -e
 
 FALLBACK_TAG='v0.0.0'
 USAGE='USAGE:
-    autotag LEVEL [-p] [-h]
+    autotag LEVEL [-p] [-u] [-h]
 '
 HELP="HELP:
     Increment git tag using given increment level.
@@ -21,8 +21,10 @@ HELP="HELP:
     Flags:
         -h --help    : Show help and exit.
         -p --preview : Do a dry run to show the new tag label only, without creating it.
-        -u --upgrade : Download latest script from GitHub and write over current script to
-                       install it. Uses cURL and not Git.
+                       This must be used as the 2nd arg i.e. after the LEVEL.
+        -u --upgrade : Download latest script from GitHub, write over current script to
+                       install it, then exit. Uses cURL and not Git. If using this flag,
+                       not other options are needed or used.
 "
 USER_ARGS="$*"
 DOWNLOAD_URL='https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'

@@ -9,20 +9,25 @@ As an added precaution, the tool will always fetch the _latest_ tags on the remo
 ## Command-line usage
 
 ```
-USAGE: autotag LEVEL [-p] [-h]
+USAGE:
+    autotag LEVEL [-p] [-u] [-h]
 
 HELP:
     Increment git tag using given increment level.
 
     Positional arguments:
-        LEVEL       : 'M' for major, 'm' for minor or 'b' for bug.
+        LEVEL        : 'M' for major, 'm' for minor or 'b' for bug.
 
     Flags:
-        -h --help   : Show help and exit.
-        -p --preview: Do a dry run to show the new tag label only, without creating it.
+        -h --help    : Show help and exit.
+        -p --preview : Do a dry run to show the new tag label only, without creating it.
+                       This must be used as the 2nd arg i.e. after the LEVEL.
+        -u --upgrade : Download latest script from GitHub, write over current script to
+                       install it, then exit. Uses cURL and not Git. If using this flag,
+                       not other options are needed or used.
 ```
 
-As with tagging the normal way, it is recommended to be on the `master` branch before creating a tag, otherwise the tag may not be meaningful in a sequence (especially if the feature branch is behind `master`).
+As with tagging the normal way, it is recommended to be on the `master` branch before creating a tag. Otherwise, the tag may not be meaningful in a sequence (especially if the feature branch is behind `master`).
 
 
 ## Examples
