@@ -35,4 +35,5 @@ $ autotag m
 - [ℹ️ About](about)
 - [📦 Installation](installation)
 - [⛵ Usage](usage)
+- [⚙️ Upgrade](upgrade)
 - [🚧 Development](development)
