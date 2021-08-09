@@ -1,7 +1,14 @@
-all: run-help major minor bug
+all: test
+
+h help:
+	@grep '^[a-z]' Makefile
 
 
-run-help:
+show-help:
+	./autotag || true
+
+
+test-helps:
 	# HELP
 	./autotag || true
 
@@ -9,14 +16,16 @@ run-help:
 
 	./autotag -h || true
 
-major:
+test-major:
 	# MAJOR
 	./autotag M --preview
 
-minor:
+test-minor:
 	# MINOR
 	./autotag m --preview
 
-bug:
+test-bug:
 	# BUG
 	./autotag b --preview
+
+test: test-helps test-major test-minor test-bug
