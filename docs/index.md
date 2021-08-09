@@ -38,3 +38,8 @@ $ autotag m
 - [⛵ Usage](usage)
 - [⚙️ Upgrade](upgrade)
 - [🚧 Development](development)
+
+
+## View source
+
+[![MichaelCurrin - auto-tag](https://img.shields.io/static/v1?label=MichaelCurrin&message=auto-tag&color=blue&logo=github)](https://github.com/MichaelCurrin/auto-tag)
