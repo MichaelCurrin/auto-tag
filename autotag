@@ -60,7 +60,12 @@ download_update_if_needed() {
 
     echo "ℹ️  Current path: $SCRIPT_FILEPATH"
 
-    echo '⬇️  Downloading latest script using curl'
+    if ! command -v curl >/dev/null; then
+      echo '🛑 `curl` is required for upgrading - please install it and try again'
+      exit 1
+    fi
+
+    echo '⬇️  Downloading latest script'
     curl -q "$DOWNLOAD_URL" >"$SCRIPT_FILEPATH"
     echo '🚀 `autotag` script updated. Exiting.'
     exit 0
