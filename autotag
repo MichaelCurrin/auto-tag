@@ -68,7 +68,8 @@ download_update_if_needed() {
     echo '⬇️  Downloading latest script'
     curl -q "$DOWNLOAD_URL" >"$SCRIPT_FILEPATH"
 
-    echo '🚀 `autotag` script updated. Exiting.'
+    echo '🚀 `autotag` script updated. Exiting...'
+    sleep 1
     exit 0
   fi
 }
