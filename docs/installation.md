@@ -7,19 +7,19 @@ Choose a directory which is in your `PATH` variable.
 
 For example:
 
-- `/usr/local/bin` (standard)
-- `~/bin` (requires adding `$HOME/bin` to `PATH`).
+- `/usr/local/bin` - standard value in `PATH`.
+- `~/bin` - remember to add `$HOME/bin` to your `PATH`.
 
 Navigate to that directory.
 
-Then dwnload the AutoTag script to that directory:
+Then download the AutoTag script to it.
 
 ### Latest
 
 e.g.
 
 ```sh
-curl -O https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag
+$ curl -O https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag
 ```
 
 ### Release
@@ -29,31 +29,32 @@ To get a specific release, replace `master` with a valid [tag](https://github.co
 e.g.
 
 ```sh
-curl -O https://raw.githubusercontent.com/MichaelCurrin/auto-tag/v1.2.0/autotag
+$ curl -O https://raw.githubusercontent.com/MichaelCurrin/auto-tag/v1.2.0/autotag
 ```
 
 
 ## 2. Change permissions
 
-Make it executable.
+Make it executable:
 
-```sh
-# Your user.
-chmod +x autotag
-
-# Or you user and other users in your group.
-chmod ug+x autotag
-```
+- For your user.
+    ```sh
+    $ chmod +x autotag
+    ```
+- Or your user _and_ other users in your user group.
+    ```sh
+    $ chmod ug+x autotag
+    ```
 
 
 ## 3. Test
 
 Navigate to another directory.
 
-Test the command can be found.
+Test that the command can be found.
 
 ```sh
-autotag --help
+$ autotag --help
 ```
 
 
