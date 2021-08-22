@@ -1,7 +1,7 @@
 # 📦 Installation
 
 
-## Download
+## 1. Download
 
 Choose a directory which is in your `PATH` variable.
 
@@ -10,18 +10,30 @@ For example:
 - `/usr/local/bin` (standard)
 - `~/bin` (requires adding `$HOME/bin` to `PATH`).
 
-Navigate to the directory.
+Navigate to that directory.
 
-Download the AutoTag script to that directory. For example:
+Then dwnload the AutoTag script to that directory:
+
+### Latest
+
+e.g.
 
 ```sh
-curl -O 'https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
+curl -O https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag
 ```
+
+### Release
 
 To get a specific release, replace `master` with a valid [tag](https://github.com/MichaelCurrin/auto-tag/tags) version for this project.
 
+e.g.
 
-## Change permissions
+```sh
+curl -O https://raw.githubusercontent.com/MichaelCurrin/auto-tag/v1.2.0/autotag
+```
+
+
+## 2. Change permissions
 
 Make it executable.
 
@@ -33,7 +45,8 @@ chmod +x autotag
 chmod ug+x autotag
 ```
 
-## Test
+
+## 3. Test
 
 Navigate to another directory.
 
@@ -44,6 +57,6 @@ autotag --help
 ```
 
 
-## Upgrade
+## 4. Upgrade
 
-Follow the [Upgrade](upgrade) command.
+Follow the [Upgrade](upgrade) command doc.
