@@ -7,6 +7,7 @@
 #
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 set -e
+set -x
 
 FALLBACK_TAG='v0.0.0'
 USAGE='USAGE:
@@ -96,7 +97,7 @@ fetch_tags() {
 }
 
 get_last_tag() {
-  LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null)
+  LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null || true)
   LAST_TAG="${LAST_TAG:-$FALLBACK_TAG}"
   LAST_TAG="${LAST_TAG/v/}"
 
