@@ -26,7 +26,7 @@ HELP="HELP:
         -u --upgrade : Download latest script from GitHub, write over current
                        script to
                        install it, then exit. Uses cURL and not Git. If using
-                       this flag, not other options are needed or used.
+                       this flag, no other options are needed or used.
 "
 USER_ARGS="$*"
 DOWNLOAD_URL='https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
