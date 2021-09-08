@@ -20,17 +20,20 @@ HELP="HELP:
 
     Flags:
         -h --help    : Show help and exit.
-        -p --preview : Do a dry run to show the new tag label only, without creating it.
-                       This must be used as the 2nd arg i.e. after the LEVEL.
-        -u --upgrade : Download latest script from GitHub, write over current script to
-                       install it, then exit. Uses cURL and not Git. If using this flag,
-                       not other options are needed or used.
+        -p --preview : Do a dry run to show the new tag label only, without
+                       creating it. This must be used as the 2nd arg i.e. after
+                       the LEVEL.
+        -u --upgrade : Download latest script from GitHub, write over current
+                       script to
+                       install it, then exit. Uses cURL and not Git. If using
+                       this flag, not other options are needed or used.
 "
 USER_ARGS="$*"
 DOWNLOAD_URL='https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
 
-# Dynamic variables. Unfortunately all are global but at least there are functions now so the script
-# is easier to work with. Also they don't have to be set here even, but are set for clarity.
+# Dynamic variables. Unfortunately all are global but at least there are
+# functions now so the script is easier to work with. Also they don't have to be
+# set here even, but are set for clarity.
 LEVEL_CHOICE=''
 PREVIEW=''
 MAJOR=''
@@ -106,8 +109,10 @@ get_last_tag() {
 }
 
 set_level() {
-  # Although the exit only happens after fetching, this needs to happen here so variables are set.
-  # Otherwise a refactor is needed to check M|m|b and exit if needed, then actually calculate here.
+  # Although the exit only happens after fetching, this needs to happen here so
+  # variables are set.
+  # Otherwise a refactor is needed to check M|m|b and exit if needed, then
+  # actually calculate here.
   case "$LEVEL_CHOICE" in
   "M")
     ((MAJOR += 1))
@@ -145,8 +150,8 @@ run() {
   NEW_TAG="v$MAJOR.$MINOR.$BUG"
   echo "⭐ New tag: $NEW_TAG"
 
-  # For some reason these emojis need a double space after to avoid looking squashed, at least on
-  # macOS.
+  # For some reason these emojis need a double space after to avoid looking
+  # squashed, at least on macOS.
   if [[ "$PREVIEW" == true ]]; then
     echo '⏭️  Skipping tag creation'
   else
