@@ -24,9 +24,8 @@ HELP="HELP:
                        creating it. This must be used as the 2nd arg i.e. after
                        the LEVEL.
         -u --upgrade : Download latest script from GitHub, write over current
-                       script to
-                       install it, then exit. Uses cURL and not Git. If using
-                       this flag, no other options are needed or used.
+                       script to install it, then exit. Uses cURL and not Git.
+                       The normal tagging flow is ignored with this flag.
 "
 USER_ARGS="$*"
 DOWNLOAD_URL='https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag'
