@@ -44,17 +44,19 @@ Here is the format:
 vMAJOR.MINOR.BUG
 ```
 
-If you are on version `v0.1.2`, then run the following to increment the minor version:
+A "bug" and "patch" release are the same thing.
+
+If you are on version `v0.1.2` and want to increment the _minor_ version, run:
 
 ```sh
-$ autotag M
+$ autotag m
 ```
 
-Then the application will increment the minor value and set the bug version to zero.
+Then the tool will increment the minor value by one and set the bug version to zero.
 
 So your new tag will be `v0.2.0`.
 
-Note this project is only intended for versions with `v` prefix.
+Note this project is only intended for tag versions with a `v` prefix.
 
 
 ## 💽 Pre-requisites
@@ -85,7 +87,7 @@ For example:
 $ npm version minor
 ```
 
-Which is similar to:
+Which is similar to running:
 
 ```sh
 $ autotag m
@@ -101,14 +103,14 @@ alias nv-M='npm version major'
 alias nv-b='npm version patch'
 ```
 
-### Reasons to use `npm version`
+### Reasons to use npm version
 
 - The NPM version command is built-in for NPM.
-- It already known used by dev community (unlike AutoTag).
-- It already handles the same functionality as AutoTag in incrementing to major, minor or bug fix.
-- It integrations with other parts of NPM running your `preversion`, `version` and `postversion` commands in your `package.json` file.
+- It is widely known and used by dev community.
+- It handles the same functionality as AutoTag in incrementing to major, minor or bug fix.
+- It integrates with other parts of NPM running your `preversion`, `version` and `postversion` commands in your `package.json` file.
 - Plus it _also_ increments the version in your `package.json`. This change requires a commit, which `npm version` does for you, using `0.2.0` for example as the commit message as `v0.2.0` as the tag.
-- It works with NPM scripts like `pre-version`.
+- It works with NPM script commands like `pre-version`.
 
 ### Reason to use AutoTag
 
