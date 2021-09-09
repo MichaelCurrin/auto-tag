@@ -23,9 +23,9 @@ AutoTag streamlines your process as you no longer have to tasks that are error-p
 ## 🎛️ What it does
 
 1. Fetch all tags on the remote.
-2. Read your latest _git_ tag
-3. Figure out and show label for the next tag.
-4. Actually create the tag, unless preview flag is used.
+1. Read your latest _git_ tag
+1. Figure out and show label for the next tag.
+1. Actually create the tag, unless the preview flag is used.
 
 
 **Notes:**
