@@ -1,14 +1,20 @@
-# 🚧 Development
+# 👷 Development
 
 **Table of contents:**
 
-- [Setup](#setup)
+- [Requirements](#requirements)
+- [Set up](#set-up)
 - [Run](#run)
     - [Direct](#direct)
     - [Using a bin directory](#using-a-bin-directory)
 
 
-## Setup
+## Requirements
+
+- [Bash](https://www.gnu.org/software/bash/)
+
+
+## Set up
 
 Clone the repo.
 
@@ -20,7 +26,7 @@ $ cd auto-tag
 
 ## Run
 
-Make any changes then run the script.
+Make any changes, then run the script.
 
 ### Direct
 
@@ -34,8 +40,8 @@ $ ./autotag --help
 Or on another repo.
 
 ```sh
-$ cd <OTHER_REPO>
-$ <PATH_TO>/autotag M --preview
+$ cd ~/repos/my-project
+$ ~/bin/autotag M --preview
 ```
 
 ### Using a bin directory
@@ -50,8 +56,9 @@ cd ~/bin
 ln -s ~/repos/auto-tag/autotag
 ```
 
-Run from a repo:
+Now you can run anywhere.
 
 ```sh
+$ cd ~/repos/my-project
 $ autotag M --preview
 ```
