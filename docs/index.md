@@ -37,7 +37,7 @@ $ autotag m
 - [📦 Installation](installation)
 - [⛵ Usage](usage)
 - [⚙️ Upgrade](upgrade)
-- [🚧 Development](development)
+- [👷 Development](development)
 
 
 ## View source
