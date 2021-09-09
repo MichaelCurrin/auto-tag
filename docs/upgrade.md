@@ -10,7 +10,7 @@ Get the latest version of AutoTag from GitHub.
 If not installed with Git, you can run this command for the script to update itself.
 
 ```sh
-$ ./autotag --upgrade
+$ autotag --upgrade
 ```
 
 ### With Git

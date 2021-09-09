@@ -5,14 +5,14 @@
 
 Choose a directory which is in your `PATH` variable.
 
-For example:
+For example, in Linux and macOS:
 
-- `/usr/local/bin` - standard value in `PATH`.
-- `~/bin` - remember to add `$HOME/bin` to your `PATH`.
+- `/usr/local/bin` - a standard value in `PATH`.
+- `~/bin` - but, remember to add `$HOME/bin` to your `PATH`.
 
 Navigate to that directory.
 
-Then download the AutoTag script to it.
+Then download the AutoTag script to it, as below.
 
 ### Latest
 
@@ -22,7 +22,7 @@ e.g.
 $ curl -O https://raw.githubusercontent.com/MichaelCurrin/auto-tag/master/autotag
 ```
 
-### Release
+### Target release
 
 To get a specific release, replace `master` with a valid [tag](https://github.com/MichaelCurrin/auto-tag/tags) version for this project.
 
