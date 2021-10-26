@@ -6,7 +6,7 @@ test-helps:
 	./autotag --help || true
 	./autotag -h || true
 
-# Run preview against this repo.
+# Run versioning preview against this repo.
 
 test-major:
 	# MAJOR
@@ -19,6 +19,11 @@ test-minor:
 test-bug:
 	# BUG
 	./autotag b --preview
+
+# Upgrade
+
+test-upgrade:
+	./autotag --upgrade
 
 # Invalid inputs.
 
