@@ -1,3 +1,6 @@
+test: test-helps test-major test-minor test-bug test-bad-flag test-bad-level
+
+
 # CLI help options.
 
 test-helps:
@@ -20,10 +23,6 @@ test-bug:
 	# BUG
 	./autotag b --preview
 
-# Upgrade
-
-test-upgrade:
-	./autotag --upgrade
 
 # Invalid inputs.
 
@@ -36,4 +35,9 @@ test-bad-level:
 	# BAD LEVEL
 	./autotag A || true
 
-test: test-helps test-major test-minor test-bug test-bad-flag test-bad-level
+
+# Upgrade
+#
+# Remember to revert this afterwards.s
+test-upgrade:
+	./autotag --upgrade
