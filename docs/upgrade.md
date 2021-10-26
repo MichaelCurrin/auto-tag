@@ -7,7 +7,9 @@ Get the latest version of AutoTag from GitHub.
 
 ### Without Git
 
-If not installed with Git, you can run this command for the script to update itself.
+If you installed with cURL rather than Git, use this option.
+
+Run this command for the script to update itself.
 
 ```sh
 $ autotag --upgrade
@@ -15,7 +17,7 @@ $ autotag --upgrade
 
 ### With Git
 
-If you cloned this repo somewhere, you can use Git. e.g.
+If you cloned this repo, you can use Git to upgrade the script. e.g.
 
 ```sh
 $ cd ~/repos/auto-tag
