@@ -132,8 +132,7 @@ set_level() {
 }
 
 make_tag() {
-  git tag \
-    -a "$NEW_TAG" \
+  git tag -a "$NEW_TAG" \
     -m "$NEW_TAG"
 }
 
