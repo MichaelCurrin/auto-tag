@@ -9,6 +9,9 @@
 - [💽 Pre-requisites](#-pre-requisites)
 - [📚 Resources](#-resources)
 - [🤔 Alternatives](#-alternatives)
+    - [Aliases](#aliases)
+    - [Reasons to use npm version](#reasons-to-use-npm-version)
+    - [Reason to use AutoTag](#reason-to-use-autotag)
 
 
 ## 🚀 Purpose
