@@ -41,6 +41,7 @@ BUG=''
 LAST_TAG=''
 NEW_TAG=''
 
+# Print help if appropriate args were used.
 help_if_needed() {
   if [[ "$#" -eq 0 ]] || [[ "$1" == '-h' ]] || [[ "$1" == '--help' ]]; then
     echo "$USAGE"
@@ -49,6 +50,7 @@ help_if_needed() {
   fi
 }
 
+# Show error for invald args.
 invalid_args_error() {
   echo "🛑 Invalid arguments: '$USER_ARGS'"
   echo
@@ -76,6 +78,7 @@ download_update_if_needed() {
   fi
 }
 
+# Process CLI arguments and set globals.
 process_args() {
   LEVEL_CHOICE="$1"
 
@@ -94,6 +97,7 @@ fetch_tags() {
   git fetch --tags
 }
 
+# Find the most recent tag in the current repo.
 get_last_tag() {
   LAST_TAG=$(git describe --abbrev=0 --tags 2>/dev/null || true)
   LAST_TAG="${LAST_TAG:-$FALLBACK_TAG}"
@@ -107,6 +111,7 @@ get_last_tag() {
   BUG="${LAST_TAG_ARR[2]}"
 }
 
+# Determine the new tag number.
 set_level() {
   # Although the exit only happens after fetching, this needs to happen here so
   # variables are set.
@@ -131,6 +136,7 @@ set_level() {
   esac
 }
 
+# Create Git tag.
 make_tag() {
   git tag -a "$NEW_TAG" \
     -m "$NEW_TAG"
