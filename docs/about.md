@@ -79,9 +79,11 @@ Inspiration for this project comes from the following:
 ## 🤔 Alternatives
 > Comparing AutoTag and the `npm version` command
 
-If you're already using Node.js + NPM and you have a `package.json` file in your project, you could make use of the builtin [npm version][] command instead of AutoTag.
+If you're already using Node.js and NPM and you have a `package.json` file in your project, you should **not** use AutoTag. AutoTag will actually give you an error if it can find a `package.json` file.
 
-For example:
+Rather use NPM CLI's built-in [npm version][] command - see [Reasons to use npm version](#reasons-to-use-npm-version) for why.
+
+For example, to increment a minor version with NPM CLI:
 
 ```sh
 $ npm version minor
@@ -107,10 +109,9 @@ alias nv-b='npm version patch'
 
 - The NPM version command is built-in for NPM.
 - It is widely known and used by dev community.
-- It handles the same functionality as AutoTag in incrementing to major, minor or bug fix.
+- It handles the same functionality as AutoTag does, in incrementing to major, minor or bug fix.
 - It integrates with other parts of NPM running your `preversion`, `version` and `postversion` commands in your `package.json` file.
-- Plus it _also_ increments the version in your `package.json`. This change requires a commit, which `npm version` does for you, using `0.2.0` for example as the commit message as `v0.2.0` as the tag.
-- It works with NPM script commands like `pre-version`.
+- It increments the `version` field in your `package.json`. This change requires a commit, which `npm version` does for you, using `0.2.0` for example as the commit message as `v0.2.0` as the tag.
 
 ### Reason to use AutoTag
 
