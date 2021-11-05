@@ -58,6 +58,16 @@ invalid_args_error() {
   exit 1
 }
 
+# Prevent accidental use of autotag command in an NPM package.
+check_if_npm() {
+  if [[ -f 'package.json' ]]; then
+    echo 'Error: Detected you are inside an NPM package.'
+    echo '  Instead of `autotag`, please use `npm version minor` or similar'.
+    exit 1
+  fi
+}
+
+# Upgrade AutoTag.
 download_update_if_needed() {
   if [[ "$#" -eq 0 ]] || [[ "$1" == '-u' ]] || [[ "$1" == '--upgrade' ]]; then
     SCRIPT_FILEPATH="$(realpath $0)"
@@ -167,6 +177,8 @@ run() {
 # Command-line entry-point.
 main() {
   help_if_needed $@
+
+  check_if_npm
   download_update_if_needed $@
   process_args $@
   run
