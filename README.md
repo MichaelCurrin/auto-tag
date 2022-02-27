@@ -29,7 +29,7 @@ A simple versioning CLI tool for devs with deadlines. Let it magically figure ou
 
 <div align="center">
 
-[![Online docs](https://img.shields.io/badge/view-Online_docs-blue?style=for-the-badge)](https://michaelcurrin.github.io/auto-tag/)
+[![Online docs](https://img.shields.io/badge/view-Online_docs-blue?style=for-the-badge)](https://michaelcurrin.github.io/auto-tag/ "Go to documentation site")
 
 </div>
 
