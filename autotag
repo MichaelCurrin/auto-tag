@@ -3,7 +3,7 @@
 #
 # MIT License
 #
-# Copyright (c) 2020 - 2022 MichaelCurrin
+# Copyright (c) 2020 - 2022, 2025 MichaelCurrin
 #
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 set -e
@@ -50,7 +50,7 @@ help_if_needed() {
   fi
 }
 
-# Show error for invald args.
+# Show error for invalid args.
 invalid_args_error() {
   echo "🛑 Invalid arguments: '$USER_ARGS'"
   echo
