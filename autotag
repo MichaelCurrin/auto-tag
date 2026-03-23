@@ -94,12 +94,12 @@ process_args() {
 
   if [[ "$2" ]]; then
     if [[ "$2" == '-p' ]] || [[ "$2" == '--preview' ]]; then
-      PREVIEW='true'
+      PREVIEW=true
     else
       invalid_args_error
     fi
   else
-    PREVIEW='false'
+    PREVIEW=false
   fi
 }
 
