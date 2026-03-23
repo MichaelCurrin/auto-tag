@@ -3,7 +3,7 @@
 #
 # MIT License
 #
-# Copyright (c) 2020 - 2022, 2025 MichaelCurrin
+# Copyright (c) 2020 - 2022, 2025 - 2026 MichaelCurrin
 #
 # https://github.com/MichaelCurrin/auto-tag/blob/master/LICENSE
 set -e
